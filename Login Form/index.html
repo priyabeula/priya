@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Container">
+        <div class="box">
+            <div class="form" id="form">
+                <div class="path" ></div>
+                <h1>Login</h1><br><br>
+                <form name="sign-up-form" action="" method="post" autocomplete="off">
+                <label>Username</label><br><br>
+                
+                <input type="text" id="username" name="username"><br><br>
+                <div class="user_error">Please fill the username</div>
+                <label>Password</label><br><br>
+                <input type="password" id="password" name="password"><br><br>
+
+                <div class="pass_error">Please fill the password</div>
+                <button id="button">Sign in</button><br>
+                  <div class="name" style="background-color:black">
+                    <span class="psw">Forgot Password</span>
+                    <label for=""><input type="checkbox" name="" id="">Remember me</label>
+                  </form>
+                  </div>
+            </div>
+
+            <img src="image.png.png" id="man">
+            <img src="login (1).png" id="page">
+            <h2 id="head">Google Form</h2>
+        </div>      
+    </div>
+    
+</body>
+</html>
+<script src = "valid.js">
+
+    function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+    const box = document .queryselector('.box');
+    const container = document .queryselector('.container');
+
+
+    container.addEventListener("mousemove" , (e)=>{
+        let horizontal = (window.innerWidth / 2 - e.pageX)/10;
+        let vertical = (window.innerheight / 2 - e.pageY)/10;
+        box.style.transform = 'rotateX(${vertical}deg) rotateY(${horizontal}deg)';
+    });
+    container.addEventListener("mouseenter",(e)=>{
+        box.style.transform = ".1s";
+        head.style.transform = "translate(120px)";
+        man.style.transform = "translate(150px)";
+        group.style.transform = "translate(130px)";
+        form.style.transform = "translate(100px)";
+    });
+    container.addEventListener("mouseleave",(e)=>{
+        box.style.transform = ".1s";
+        box.style.transform = "rotateX(0deg)rotateY(0deg)";        
+        head.style.transform = "translate(0px)";
+        man.style.transform = "translate(0px)";
+        group.style.transform = "translate(0px)";
+        form.style.transform = "translate(0px)";
+    });
+
+    function Toggle() {
+        var temp = document.getElementById("typepass");
+        if (temp.type === "password") {
+            temp.type = "text";
+        }
+        else {
+            temp.type = "password";
+        }
+    }
+</script>
